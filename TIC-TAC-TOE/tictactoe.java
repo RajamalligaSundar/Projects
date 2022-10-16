@@ -68,31 +68,30 @@ public class tictactoe
         String element ="";
         int count = 0; 
 
-            if(toss_won == player1)
-            {
-                element = choice1;
-                Print("Enter row (0-2): ");
-                int row = sc.nextInt();
-                Print("Enter column (0-2): ");
-                int column = sc.nextInt();
+         if(toss_won == player1)
+        {
+            element = choice1;
+            Print("Enter row (0-2): ");
+            int row = sc.nextInt();
+            Print("Enter column (0-2): ");
+            int column = sc.nextInt();
 
-                new_array[row][column] = element;
-                Print_2D_Array(new_array);
-                count++;
-            }
-            else if(toss_won == Player2)
-            {
-                element = choice2;
-                Print("Enter row (0-2): ");
-                int row = sc.nextInt();
-                Print("Enter column (0-2): ");
-                int column = sc.nextInt();
+            new_array[row][column] = element;
+            Print_2D_Array(new_array);
+            count++;
+        }
+        else if(toss_won == Player2)
+        {
+           element = choice2;
+           Print("Enter row (0-2): ");
+           int row = sc.nextInt();
+           Print("Enter column (0-2): ");
+           int column = sc.nextInt();
 
-                new_array[row][column] = element;
-                Print_2D_Array(new_array);
-                count++;
-            }
-
+           new_array[row][column] = element;
+           Print_2D_Array(new_array);
+           count++;
+        }
 
     }
 
