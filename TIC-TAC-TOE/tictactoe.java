@@ -20,9 +20,7 @@ public class tictactoe
     }
     public static void Print_GameRules()
     {
-        Print("\n-------------------------------------------------------------------------------------------\n");
-        Print("TIC-TAC-TOE\n\nGAME RULES:\n1. Enter Player Name\n2. Choose X or O\n3. Enter position where you want to place\n4. Wait for the other player to play \n5. Results are declared based on the game played\n");
-        Print("-------------------------------------------------------------------------------------------\nLet's Play");
+        Print("\n-------------------------------------------------------------------------------------------\nTIC-TAC-TOE\n\nGAME RULES:\n1. Enter Player Name\n2. Choose X or O\n3. Enter position where you want to place\n4. Wait for the other player to play \n5. Results are declared based on the game played\n-------------------------------------------------------------------------------------------\nLet's Play");
     }
     public static void Print_2D_Array(String[][] array)
     {
@@ -63,13 +61,13 @@ public class tictactoe
     public static void choice1(String choice1, String[][] new_array, String choice2, int count)
     {
         String element = choice1;
-        Print("Enter row (0-2): ");
+        Print("Enter row (1-3): ");
         int row = sc.nextInt();
-        Print("Enter column (0-2): ");
+        Print("Enter column (1-3): ");
         int column = sc.nextInt();
         count++;
 
-        new_array[row][column] = element;
+        new_array[row-1][column-1] = element;
         Print_2D_Array(new_array);
         //System.out.println(count);
         String win = Winning_State(new_array, count);
@@ -82,13 +80,13 @@ public class tictactoe
     public static void choice2(String choice2, String[][] new_array, String choice1, int count)
     {
         String element = choice2;
-        Print("Enter row (0-2): ");
+        Print("Enter row (1-3): ");
         int row = sc.nextInt();
-        Print("Enter column (0-2): ");
+        Print("Enter column (1-3): ");
         int column = sc.nextInt();
         count++;
 
-        new_array[row][column] = element;
+        new_array[row-1][column-1] = element;
         Print_2D_Array(new_array);
         //System.out.println(count);
         String win = Winning_State(new_array, count);
@@ -223,12 +221,12 @@ public class tictactoe
          if(toss_won == player1)
         {
             element = choice1;
-            Print("Enter row (0-2): ");
+            Print("Enter row (1-3): ");
             int row = sc.nextInt();
-            Print("Enter column (0-2): ");
+            Print("Enter column (1-3): ");
             int column = sc.nextInt();
 
-            new_array[row][column] = element;
+            new_array[row-1][column-1] = element;
             Print_2D_Array(new_array);
             count++;
             choice2(choice2, new_array, choice1, count);
@@ -236,12 +234,12 @@ public class tictactoe
         else if(toss_won == Player2)
         {
            element = choice2;
-           Print("Enter row (0-2): ");
+           Print("Enter row (1-3): ");
            int row = sc.nextInt();
-           Print("Enter column (0-2): ");
+           Print("Enter column (1-3): ");
            int column = sc.nextInt();
 
-           new_array[row][column] = element;
+           new_array[row-1][column-1] = element;
            Print_2D_Array(new_array);
            count++;
            choice1(choice1, new_array, choice2, count);
