@@ -277,6 +277,5 @@ public class tictactoe
         Game_Board(array); 
         String toss_won = Toss_To_Start(player1, player2);
         Game_Flow(array,toss_won, player1, player2, choice1, choice2);
-        
     }
 }
